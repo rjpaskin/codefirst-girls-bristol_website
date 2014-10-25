@@ -33,7 +33,7 @@
   <div class="container">
 
     <div class="page-header">
-	<a href ="/contents/"><img src="/assets/code61_logo_66x66.png" ></a><h1>Web Fundamentals 1 <small>Git and CSS</small></h1>
+	<a href ="/contents/"><img src="/assets/code61_logo_66x66.png" ></a><h1>Web Fundamentals 1 <small>CSS and the command line</small></h1>
 </div>
 
 <div class="tabbable tabs-left">
@@ -56,7 +56,7 @@
 		
 	
 		
-		<li><a href="#5_push_to_github" data-toggle="tab">Pushing to GitHub </a></li>
+		<li><a href="#5_command_line" data-toggle="tab">Meet the Command Line </a></li>
 		
 	
 		
@@ -73,42 +73,54 @@
 
 		<h2>Recap from last time</h2>
 		
-<h3 id="htmlcss">HTML/CSS</h3>
+<h3 id="the_web">The web</h3>
 
 <ul>
-<li>Webpage is just a collection of files: HTML, CSS &amp; Javascript.</li>
+<li>A webpage is just a collection of files: HTML, CSS &amp; Javascript.</li>
 
 <li>We can edit these files locally.</li>
 
 <li>We can create them locally (using a text editor) and view then in a browser.</li>
 </ul>
 
-<h3 id="command_line">Command line</h3>
+<h3 id="html">HTML</h3>
 
 <ul>
-<li><code>ls</code> - list the files in the current directory</li>
+<li>HTML is made up of a set of nested tags, which look like this: <code>&lt;p&gt;</code>.</li>
 
-<li><code>cd coding_course</code> - move into the ‘coding_course’ directory</li>
+<li>Tags can either come in pairs: <code>&lt;p&gt;...&lt;/p&gt;</code>, or as a <em>self-closing</em> tag: <code>&lt;img&gt;</code>.</li>
 
-<li><code>cd ..</code> - move up a level</li>
+<li>You can add links with the <code>&lt;a&gt;</code> tag: <code>&lt;a href=&quot;path/to/the/page&quot;&gt;Link text&lt;/a&gt;</code>.</li>
+
+<li>You can add images with the <code>&lt;img&gt;</code> tag: <code>&lt;img src=&quot;path/to/the/image.jpg&quot; alt=&quot;description of the image&quot;&gt;</code>.</li>
+
+<li>Lists are made with the <code>&lt;ol&gt;</code> (numbered) or <code>&lt;ul&gt;</code> (bullets) tags. Each item in the list is surrounded by <code>&lt;li&gt;</code> tags.</li>
+
+<li>Headings are made with the <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> tags, where lower numbers are more important.</li>
+
+<li>Tables are constructed with the <code>&lt;table&gt;</code> tag, with each row contained within a <code>&lt;tr&gt;</code> tag, and each cell within a <code>&lt;td&gt;</code> tag.</li>
 </ul>
-<div class='exercise alert alert-info'><strong>Task:</strong> 
-<ol>
- <li>Open the command line ('Terminal' on a mac, 'Command prompt with Ruby on Rails' on windows)</li>
- <li>Use cd and ls to navigate to your coding_course folder.</li>
-</ol>
-</div>
-<h3 id="something_new">Something new</h3>
-<div class='exercise alert alert-info'><strong>Task:</strong> 
-<ol>
-  <li>Make sure you're in your coding_course folder.</li>
-  <li>Do an ls.</li>
-  <li>Type git clone https://github.com/code61/html2.git</li>
-  <li>Do an ls.</li>
-</ol>
-</div>
-<p>You just used git to get the code for the next exercise onto your laptop!</p>
 
+<h3 id="check_your_work_from_last_time">Check your work from last time</h3>
+<div class='exercise alert alert-info'><strong>Task:</strong>
+<ul>
+<li>Go to the <a href='https://github.com/code61/learning_html'>Github repository</a> from the last session.</li>
+
+<li>In the <code>branch</code> dropdown (just above the list of files) select the <code>solution</code> branch.</li>
+
+<li>Click on the files below to see the solution.</li>
+</ul>
+</div>
+<h3 id="setup_for_today">Setup for today</h3>
+<div class='exercise alert alert-info'><strong>Task:</strong>
+<ol>
+<li>Go to the github repository for this session: <a href='https://github.com/code61/html2'>https://github.com/code61/html2</a></li>
+
+<li><a href='https://github.com/code61/html2/archive/master.zip'>Download</a> the repository and unzip it (double click on the .zip file)</li>
+
+<li>Open the newly-created folder (with the same name as the .zip file) in Sublime Text and have a look around.</li>
+</ol>
+</div>
 	</div>
 
 	
@@ -158,11 +170,13 @@
 <span class='p'>}</span>
 </code></pre></div>
 <p>Note that you can specify multiple properties on one element. When you do this it’s nice to lay them out on multiple lines as done above.</p>
-<div class='exercise alert alert-info'><strong>Task:</strong> 
+<div class='exercise alert alert-info'><strong>Task:</strong>
 <ol>
-<li>Open `exercise1.html` in Sublime Text and in Chrome.</li>
-<li>Add some css in the `head` to make the `h1` turn red.</li>
-<li>Continue with the exercise until `exercise1.html` looks like `exercise1_solution.png`.</li>
+<li>Open <code>exercise1.html</code> in Sublime Text and in Chrome.</li>
+
+<li>Add some css in the <code>head</code> to make the <code>h1</code> turn red.</li>
+
+<li>Continue with the exercise until <code>exercise1.html</code> looks like <code>exercise1_solution.png</code>.</li>
 </ol>
 </div>
 	</div>
@@ -356,100 +370,111 @@
 	</div>
 
 	
-	<div class="tab-pane " id="5_push_to_github">
+	<div class="tab-pane " id="5_command_line">
 	
 
-		<h2>Pushing to GitHub</h2>
+		<h2>Meet the Command Line</h2>
 		
-<p>Git is a version control system. It allows you to keep the entire history of your code, and makes it easy to share and collaborate with others.</p>
+<p>The command line is a way to interact with your computer programmatically. If you are doing any software development you will need to get to grips with using the command line, as many of the programs you will use will be run from it, instead of clicking an icon.</p>
 
-<h3 id="using_git">Using git</h3>
+<h3 id="opening_the_command_line">Opening the command line</h3>
 
-<p>Using git is really easy:</p>
+<ul>
+<li>On a Mac open <em>Terminal</em> (Applications &gt; Terminal)</li>
 
+<li>On Windowns open <em>Command Prompt with Ruby on Rails</em></li>
+</ul>
+
+<h3 id="moving_around">Moving around</h3>
+
+<p>Note: when giving you instructions for the command line we will precede them with a <code>$</code> to represent the command prompt e.g.</p>
+
+<pre><code>$ some_command</code></pre>
+
+<p><strong>You shouldn’t type the <code>$</code> sign - just the stuff after it.</strong> So for the above instruction you would just type <code>some_command</code> into the command line.</p>
+
+<p>The first thing you will need to get used to is moving around. Start by printing the name of the directory you are in:</p>
+
+<pre><code>$ pwd</code></pre>
+
+<p>Then have a look at what’s in that directory ( <em>list</em> the contents):</p>
+
+<pre><code>$ ls</code></pre>
+
+<p>To move up a directory ( <em>change directory</em> ) do</p>
+
+<pre><code>$ cd ..</code></pre>
+
+<p>To move back into the folder you just left do</p>
+
+<pre><code>$ cd name_of_the_folder</code></pre>
+
+<p>Your command line will help you: <kbd>tab</kbd> can often be used to auto-complete names of files, the up arrow can be used to cycle through previous commands that you have typed.</p>
+
+<h3 id="creating_a_directory">Creating a directory</h3>
+
+<p>You can do a lot more on the command line than just move around. We’ll be using the command line a lot over the course. For the time being we just need to create a folder:</p>
+
+<pre><code>$ mkdir coding_course</code></pre>
+
+<p>Note: choosing names without spaces makes command line navigation easier.</p>
+<div class='exercise alert alert-info'><strong>Task:</strong>
 <ol>
-<li>Set up a folder to be a <em>git repo</em>. This tells git to track all changes in that folder.</li>
+<li>
+<p>Open your command line:</p>
 
-<li>After you’ve made some changes, save them into the repository.</li>
+<ul>
+<li>On a Mac open <em>Terminal</em> (Applications &gt; Terminal)</li>
 
-<li>Once you’ve saved the changes push them up to github.</li>
-</ol>
+<li>On Windowns open <em>Command Prompt with Ruby on Rails</em></li>
+</ul>
+</li>
 
-<p>The first point is important: <em>git works on a folder level</em>. It tracks all the changes you make to files within a given folder.</p>
+<li>
+<p>Find out where you are:</p>
 
-<h3 id="actually_using_git">Actually using git</h3>
+<pre><code> $ pwd</code></pre>
+</li>
 
-<p>Actually using git is a bit harder. It’s a very powerful tool and pretty complex to get started with. To make things simpler, we’re going to use a tool called <code>gitgit</code>.</p>
+<li>
+<p>See what is in the same folder:</p>
 
-<p>To install gitgit open the command line and type the following:</p>
+<pre><code> $ ls</code></pre>
+</li>
 
-<pre><code>gem install gitgit</code></pre>
+<li>
+<p>If you are on a Mac move into <code>Documents</code>:</p>
 
-<p>To see if this worked, type</p>
+<pre><code> $ cd Documents</code></pre>
+</li>
 
-<pre><code>gitgit</code></pre>
+<li>
+<p>Create the folder for the coding course:</p>
 
-<p>You should see a list of gitgit commands something like this:</p>
+<pre><code> $ mkdir coding_course</code></pre>
+</li>
 
-<pre><code>$ gitgit
-Commands:
-  gitgit help [COMMAND]  # Describe available commands or one specific command
-  gitgit init            # Initialise a git repo
-  gitgit lg              # Show your recent saves
-  gitgit push            # Push your changes to github
-  gitgit save            # Save you changes to the repo
-  gitgit status          # See what changes you&#39;ve made since you last save</code></pre>
+<li>
+<p>Move into that folder:</p>
 
-<p>If it didn’t work, you might need to do</p>
+<pre><code> $ cd coding_course</code></pre>
+</li>
 
-<pre><code>sudo gem install gitgit</code></pre>
+<li>
+<p>Move back up to the folder above</p>
 
-<p>and type your password.</p>
+<pre><code> $ cd ..</code></pre>
+</li>
 
-<p>You also might need to do</p>
+<li>
+<p>Move back into the <code>coding_course</code> folder. This time don&#39;t type out <code>coding_course</code> - just type out the first few letters and hit <code>Tab</code>:</p>
 
-<pre><code>rbenv rehash</code></pre>
+<pre><code>$ cd coding_course</code></pre>
+</li>
 
-<p>If in doubt contact a teaching assistant!</p>
-
-<h3 id="using_gitgit">Using gitgit</h3>
-
-<p>To <strong>make a folder into a git repository</strong>:</p>
-
-<pre><code>gitgit init</code></pre>
-
-<p>then follow the instructions. You’ll only need to do this once for each folder you want to make into a repository.</p>
-
-<p>After you’ve made some changes to your files and saved them, you can <strong>save them into your repo</strong> by typing:</p>
-
-<pre><code>gitgit save</code></pre>
-
-<p>Finally, to push your code up to github you can do</p>
-
-<pre><code>gitgit push</code></pre>
-
-<p>Before you do this, you will need to setup your repo with github.</p>
-
-<h3 id="setting_up_your_repo_with_github">Setting up your repo with github</h3>
-
-<p>Go to github, login, and click “Create New Repo” in the top left hand corner.</p>
-
-<p><img src="/assets/create_repo.png" alt="Creating a repo on GitHub" /></p>
-
-<p>Follow the instructions, calling it something like <code>first_site</code>. <strong>Do not</strong> click the box which says ‘Create a readme with this repository’. You’ll get to a page when it’ll describe how to get your code online. You want to follow the instructions for “Pushing an existing repository to github”.</p>
-
-<h3 id="pushing_your_code_to_github">Pushing your code to github</h3>
-
-<p>We will now set up your <code>first_site</code> folder to use git and push it up to github.</p>
-<div class='exercise alert alert-info'><strong>Task:</strong> 
-<ol>
-<li>Navigate to your first_site folder using cd and ls.</li>
-<li>Make it into a git repo: "gitgit init"</li>
-<li>Save all the work you've done so far: "gitgit save"</li>
-<li>Log in to GitHub.</li>
-<li>On github create a new repository called 'first_site'. DO NOT click the box which says 'Create a readme'.</li>
-<li>Copy and paste the instructions it gives you into the command line. You are 'Pushing an existing repository to github'.</li>
-<li>Go back to github and refresh the page. You should see your code.</li>
+<li>
+<p>In the <em>Finder</em> (Mac) or <em>My Computer</em> (Windows) find the folder that you just created.</p>
+</li>
 </ol>
 </div>
 	</div>
@@ -461,23 +486,27 @@ Commands:
 		<h2>Homework</h2>
 		
 <h3 id="finishing_off">Finishing off</h3>
-<div class='exercise alert alert-info'><strong>Task:</strong> 
-
+<div class='exercise alert alert-info'><strong>Task:</strong>
 <p>Finish off both CSS exercises from class. Check your solutions online:</p>
 
 <ul>
-<li>Find the HTML2 repository on Code61's github page.</li>
-<li>In the `branch` dropdown (just above the list of files) select the `solution` branch.</li>
-<li>Click on the files below to see the solution</li>
+<li>Find the <a href='https://github.com/code61/html2'>HTML2 repository</a> on Code61&#39;s github page.</li>
+
+<li>In the <code>branch</code> dropdown (just above the list of files) select the <code>solution</code> branch.</li>
+
+<li>Click on the files below to see the solution.</li>
 </ul>
 </div>
 <h3 id="more_htmlcss">More HTML/CSS</h3>
-<div class='exercise alert alert-info'><strong>Task:</strong> 
+<div class='exercise alert alert-info'><strong>Task:</strong>
 <ol>
-<li>Complete the whole of Project 3 on the [General Assembly Dash](https://dash.generalassemb.ly/projects) site.</li>
-<li>Make some changes to your `first_site` based on what you've learnt. Make sure you add them to git, push them to github and check you can see them online.</li>
-<li>(Optional) Do the projects from the [Codecademy Web Track](http://www.codecademy.com/tracks/web) Sections 7, 8 &amp; 9.</li>
-<li>(Optional) Read [this article](https://www.inkling.com/read/dreamweaver-cs6-missing-manual-david-sawyer-mcfarland-1st/chapter-4/understanding-links) about absolute vs. relative links.</li>
+<li>Complete the whole of Project 3 on the <a href='https://dash.generalassemb.ly/projects'>General Assembly Dash</a> site.</li>
+
+<li>Make some changes to your <code>first_site</code> based on what you&#39;ve learnt.</li>
+
+<li>(Optional) Do the projects from the <a href='http://www.codecademy.com/tracks/web'>Codecademy Web Track</a> Sections 7, 8 &amp; 9.</li>
+
+<li>(Optional) Read <a href='https://www.inkling.com/read/dreamweaver-cs6-missing-manual-david-sawyer-mcfarland-1st/chapter-4/understanding-links'>this article</a> about absolute vs. relative links.</li>
 </ol>
 </div>
 	</div>
