@@ -52,6 +52,10 @@
 		
 	
 		
+		<li><a href="#5_push_to_github" data-toggle="tab">Pushing to GitHub </a></li>
+		
+	
+		
 		<li><a href="#6_homework" data-toggle="tab">Homework </a></li>
 		
 	
@@ -179,6 +183,121 @@
 <li>Push your changes up to the <code>gh-pages</code> branch on GitHub.</li>
 </ol>
 </div>
+	</div>
+
+	
+	<div class="tab-pane " id="5_push_to_github">
+	
+
+		<h2>Pushing to GitHub</h2>
+		
+<p>Git is a version control system. It allows you to keep the entire history of your code, and makes it easy to share and collaborate with others.</p>
+
+<h3 id="using_git">Using Git</h3>
+
+<p>Using Git is really easy:</p>
+
+<ol>
+<li>Set up a folder to be a <em>Git repo</em>. This tells Git to track all changes in that folder.</li>
+
+<li>After you’ve made some changes, save them into the repository.</li>
+
+<li>Once you’ve saved the changes push them up to Github.</li>
+</ol>
+
+<p>The first point is important: <em>Git works on a folder level</em>. It tracks all the changes you make to files within a given folder.</p>
+
+<h3 id="actually_using_git">Actually using Git</h3>
+
+<p>Actually using Git is a bit harder. It’s a very powerful tool and pretty complex to get started with. To make things simpler, we’re going to use a tool called <code>gitgit</code>.</p>
+
+<p>To install gitgit open the command line and type the following:</p>
+
+<pre><code>gem install gitgit</code></pre>
+
+<p>To see if this worked, type</p>
+
+<pre><code>gitgit</code></pre>
+
+<p>You should see a list of gitgit commands something like this:</p>
+
+<pre><code>$ gitgit
+Commands:
+  gitgit help [COMMAND]  # Describe available commands or one specific command
+  gitgit init            # Initialise a git repo
+  gitgit lg              # Show your recent saves
+  gitgit push            # Push your changes to github
+  gitgit save            # Save you changes to the repo
+  gitgit status          # See what changes you&#39;ve made since you last save</code></pre>
+
+<p>If it didn’t work, you might need to do</p>
+
+<pre><code>sudo gem install gitgit</code></pre>
+
+<p>and type your password.</p>
+
+<p>If in doubt, contact a teaching assistant!</p>
+
+<h3 id="using_gitgit">Using gitgit</h3>
+
+<p>To <strong>make a folder into a git repository</strong>:</p>
+
+<pre><code>gitgit init</code></pre>
+
+<p>then follow the instructions. You’ll only need to do this once for each folder you want to make into a repository.</p>
+
+<p>After you’ve made some changes to your files and saved them, you can <strong>save them into your repo</strong> by typing:</p>
+
+<pre><code>gitgit save</code></pre>
+
+<p>Finally, to push your code up to Github you can do</p>
+
+<pre><code>gitgit push</code></pre>
+
+<p>Before you do this, you will need to setup your repo with Github.</p>
+
+<h3 id="setting_up_your_repo_with_github">Setting up your repo with Github</h3>
+
+<p>Go to Github, login, and click “Create New Repo” in the top left hand corner.</p>
+
+<p><img src="/assets/create_repo.png" alt="Creating a repo on Github" /></p>
+
+<p>Follow the instructions, calling it something like <code>first_site</code>. <strong>Do not</strong> click the box which says ‘Create a readme with this repository’. You’ll get to a page when it’ll describe how to get your code online. You want to follow the instructions for “Pushing an existing repository to Github”.</p>
+
+<h3 id="pushing_your_code_to_github">Pushing your code to Github</h3>
+
+<p>We will now set up your <code>first_site</code> folder to use git and push it up to Github.</p>
+<div class='exercise alert alert-info'><strong>Task:</strong>
+<ol>
+<li>Navigate to your first_site folder using <code>cd</code> and <code>ls</code>.</li>
+
+<li>Make it into a git repo: <code>gitgit init</code>.</li>
+
+<li>Save all the work you&#39;ve done so far: <code>gitgit save</code>.</li>
+
+<li>Log in to Github.</li>
+
+<li>On Github create a new repository called &#39;first_site&#39;. DO NOT click the box which says &#39;Create a readme&#39;.</li>
+
+<li>Copy and paste the instructions it gives you into the command line. You are &#39;Pushing an existing repository to Github&#39;.</li>
+
+<li>Go back to Github and refresh the page. You should see your code.</li>
+</ol>
+</div>
+<h3 id="publishing_site_using_github_pages">Publishing site using GitHub pages</h3>
+
+<p>You’re now going to publish your <code>first_site</code> using <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+
+<p>To do this you need to push your website up to a branch called <code>gh-pages</code>. You don’t know about branches yet, but you can see them on Github. Right now you’ll just see a single branch called <code>master</code>.</p>
+
+<p>You don’t actually need to understand anything about branches at the moment, as gitgit makes it really easy to publish as a Github page. Just run</p>
+
+<pre><code>gitgit publish</code></pre>
+
+<p>When you go to github you should now see a <code>gh-pages</code> option in the branches dropdown.</p>
+
+<p>The <code>gh-pages</code> branch is a signal to Github that you want your code to be deployed as a website. You can find the URL of your website by looking in your repository settings on GitHub.</p>
+
 	</div>
 
 	
