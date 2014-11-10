@@ -33,30 +33,38 @@
   <div class="container">
 
     <div class="page-header">
-	<a href ="/contents/"><img src="/assets/code61_logo_66x66.png" ></a><h1>Web Fundamentals 1 <small>Analytics and HTML Forms</small></h1>
+	<a href ="/contents/"><img src="/assets/code61_logo_66x66.png" ></a><h1>Web Fundamentals 1 <small>Hosting and HTML Forms</small></h1>
 </div>
 
 <div class="tabbable tabs-left">
 <ul class="nav nav-tabs" id="myTab">
 	
 		
-		<li class="active"><a href="#1_recap" data-toggle="tab">Recap </a></li>
+		<li class="active"><a href="#1_domain_name" data-toggle="tab">Wiring up your domain </a></li>
 		
 	
 		
-		<li><a href="#2_domain_name" data-toggle="tab">Wiring up your domain </a></li>
+		<li><a href="#2_push_to_github" data-toggle="tab">Pushing to GitHub </a></li>
 		
 	
 		
-		<li><a href="#4_google_analytics" data-toggle="tab">Google Analytics </a></li>
+		<li><a href="#3_forms" data-toggle="tab">Basic forms </a></li>
 		
 	
 		
-		<li><a href="#5_push_to_github" data-toggle="tab">Pushing to GitHub </a></li>
+		<li><a href="#4_form_submissions" data-toggle="tab">Form submissions </a></li>
 		
 	
 		
-		<li><a href="#6_homework" data-toggle="tab">Homework </a></li>
+		<li><a href="#5_your_own_form" data-toggle="tab">Creating your own form </a></li>
+		
+	
+		
+		<li><a href="#6_other_elements" data-toggle="tab">More form elements </a></li>
+		
+	
+		
+		<li><a href="#7_homework" data-toggle="tab">Homework </a></li>
 		
 	
 </ul>
@@ -64,45 +72,7 @@
 <div class="tab-content">
 
 	
-	<div class="tab-pane active" id="1_recap">
-	
-
-		<h2>Recap</h2>
-		<div class='exercise alert alert-info'><strong>Task:</strong>
-<ol>
-<li>Open the command line.</li>
-
-<li>Navigate to your <code>first_site</code> folder.</li>
-
-<li>Make a change to index.html.</li>
-
-<li>Save the change.</li>
-
-<li>Push it to github.</li>
-
-<li>Deploy it to github pages.</li>
-</ol>
-</div>
-<h3 id="css">CSS</h3>
-
-<p>We’re now going to add a separate CSS file to your first_site. (If you already have one, that’s fine - just add another one.)</p>
-<div class='exercise alert alert-info'><strong>Task:</strong>
-<ol>
-<li>Create a new file in sublime text and save it as <code>main.css</code> in your first_site folder.</li>
-
-<li>Put a CSS rule in that file (e.g. &#39;h1 {color: red}&#39;)</li>
-
-<li>Put a link to the file from the head section of your index.html file.</li>
-
-<li>Make sure you can see the style when you open index.html in chrome.</li>
-
-<li>Save, push and deploy your changes.</li>
-</ol>
-</div>
-	</div>
-
-	
-	<div class="tab-pane " id="2_domain_name">
+	<div class="tab-pane active" id="1_domain_name">
 	
 
 		<h2>Wiring up your domain</h2>
@@ -129,7 +99,7 @@
 
 <p><img src="/assets/dns_settings.png" alt="123-reg DNS Settings" /></p>
 
-<p>(The @ dns entry stands for the root or bare domain.)</p>
+<p>(The <code>@</code> dns entry stands for the root or bare domain.)</p>
 <div class='exercise alert alert-info'><strong>Task:</strong> 
 
 <p>Log in to your domain registrar and set an A-record to point towards GitHub.</p>
@@ -137,7 +107,7 @@
 </div>
 <p>Your changes won’t take effect immediately.</p>
 
-<h3 id="tell_github_to_expect_requests_for_your_domain_name">Tell github to expect requests for your domain name</h3>
+<h3 id="tell_github_to_expect_requests_for_your_domain_name">Tell GitHub to expect requests for your domain name</h3>
 <div class='exercise alert alert-info'><strong>Task:</strong>
 <ol>
 <li>
@@ -151,42 +121,14 @@
 </li>
 
 <li>
-<p>Save that file as <code>CNAME</code> (uppercase, with no extension) in your <code>first_site</code> folder</p>
-</li>
-
-<li>
-<p>Commit your change and then push to github.</p>
+<p>Save that file as <code>CNAME</code> (uppercase, with no extension) in your <code>first_site</code> folder.</p>
 </li>
 </ol>
 </div>
 	</div>
 
 	
-	<div class="tab-pane " id="4_google_analytics">
-	
-
-		<h2>Google Analytics</h2>
-		
-<p>Google Analytics is an analytics service provided for free by Google. It allows you get an overview of how many people are visiting your site, where they come from, what they do on your site, and much more.</p>
-
-<h3 id="how_it_works">How it works</h3>
-
-<p>To use Google Analytics you need to place a snippet of javascript (that they provide) on each of the HTML pages on your site. When a user visits the page, the javascript sends a message to the Google Analytics site logging the visit.</p>
-<div class='exercise alert alert-info'><strong>Task:</strong>
-<ol>
-<li>Set up a <a href='http://www.google.com/analytics/'>Google Analytics</a> account. You want to choose the default &#39;Universal Analytics&#39; option.</li>
-
-<li>In the Admin section, create a new account for your personal site.</li>
-
-<li>Following the instructions, install the analytics code on all the pages of your site.</li>
-
-<li>Push your changes up to the <code>gh-pages</code> branch on GitHub.</li>
-</ol>
-</div>
-	</div>
-
-	
-	<div class="tab-pane " id="5_push_to_github">
+	<div class="tab-pane " id="2_push_to_github">
 	
 
 		<h2>Pushing to GitHub</h2>
@@ -250,65 +192,356 @@ Commands:
 
 <pre><code>gitgit save</code></pre>
 
-<p>Finally, to push your code up to Github you can do</p>
+<p>Finally, to push your code up to GitHub you can do:</p>
 
 <pre><code>gitgit push</code></pre>
 
-<p>Before you do this, you will need to setup your repo with Github.</p>
+<p>Before you do this, you will need to setup your repo with GitHub.</p>
 
-<h3 id="setting_up_your_repo_with_github">Setting up your repo with Github</h3>
+<h3 id="setting_up_your_repo_with_github">Setting up your repo with GitHub</h3>
 
-<p>Go to Github, login, and click “Create New Repo” in the top left hand corner.</p>
+<p>Go to GitHub, login, and click “Create New Repo” in the top left hand corner.</p>
 
-<p><img src="/assets/create_repo.png" alt="Creating a repo on Github" /></p>
+<p><img src="/assets/create_repo.png" alt="Creating a repo on GitHub" /></p>
 
-<p>Follow the instructions, calling it something like <code>first_site</code>. <strong>Do not</strong> click the box which says ‘Create a readme with this repository’. You’ll get to a page when it’ll describe how to get your code online. You want to follow the instructions for “Pushing an existing repository to Github”.</p>
+<p>Follow the instructions, calling it something like <code>first_site</code>. <strong>Do not</strong> click the box which says ‘Create a readme with this repository’. You’ll get to a page when it’ll describe how to get your code online. You want to follow the instructions for “Pushing an existing repository to GitHub”.</p>
 
-<h3 id="pushing_your_code_to_github">Pushing your code to Github</h3>
+<h3 id="pushing_your_code_to_github">Pushing your code to GitHub</h3>
 
-<p>We will now set up your <code>first_site</code> folder to use git and push it up to Github.</p>
+<p>We will now set up your <code>first_site</code> folder to use Git and push it up to GitHub.</p>
 <div class='exercise alert alert-info'><strong>Task:</strong>
 <ol>
-<li>Navigate to your first_site folder using <code>cd</code> and <code>ls</code>.</li>
+<li>Navigate to your <code>first_site</code> folder using <code>cd</code> and <code>ls</code>.</li>
 
 <li>Make it into a git repo: <code>gitgit init</code>.</li>
 
 <li>Save all the work you&#39;ve done so far: <code>gitgit save</code>.</li>
 
-<li>Log in to Github.</li>
+<li>Log in to GitHub.</li>
 
-<li>On Github create a new repository called &#39;first_site&#39;. DO NOT click the box which says &#39;Create a readme&#39;.</li>
+<li>On GitHub create a new repository called &#39;first_site&#39;. DO NOT click the box which says &#39;Create a readme&#39;.</li>
 
-<li>Copy and paste the instructions it gives you into the command line. You are &#39;Pushing an existing repository to Github&#39;.</li>
+<li>Copy and paste the instructions it gives you into the command line. You are &#39;Pushing an existing repository to GitHub&#39;.</li>
 
-<li>Go back to Github and refresh the page. You should see your code.</li>
+<li>Go back to GitHub and refresh the page. You should see your code.</li>
 </ol>
 </div>
 <h3 id="publishing_site_using_github_pages">Publishing site using GitHub pages</h3>
 
 <p>You’re now going to publish your <code>first_site</code> using <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 
-<p>To do this you need to push your website up to a branch called <code>gh-pages</code>. You don’t know about branches yet, but you can see them on Github. Right now you’ll just see a single branch called <code>master</code>.</p>
+<p>To do this you need to push your website up to a branch called <code>gh-pages</code>. You don’t know about branches yet, but you can see them on GitHub. Right now you’ll just see a single branch called <code>master</code>.</p>
 
-<p>You don’t actually need to understand anything about branches at the moment, as gitgit makes it really easy to publish as a Github page. Just run</p>
+<p>You don’t actually need to understand anything about branches at the moment, as gitgit makes it really easy to publish as a GitHub page. Just run</p>
 
 <pre><code>gitgit publish</code></pre>
 
-<p>When you go to github you should now see a <code>gh-pages</code> option in the branches dropdown.</p>
+<p>When you go to GitHub you should now see a <code>gh-pages</code> option in the branches dropdown.</p>
 
-<p>The <code>gh-pages</code> branch is a signal to Github that you want your code to be deployed as a website. You can find the URL of your website by looking in your repository settings on GitHub.</p>
+<p>The <code>gh-pages</code> branch is a signal to GitHub that you want your code to be deployed as a website. You can find the URL of your website by looking in your repository settings on GitHub.</p>
+
+<p>Typically, you’ll need to wait about 10 minutes after you publish changes before your site is updated.</p>
+<div class='exercise alert alert-info'><strong>Task:</strong>
+<p>Visit the domain you put in your <code>CNAME</code> file - you should see your <code>first_site</code> in all it&#39;s glory!</p>
+
+<p>If you get a page with the GitHub logo and a big &quot;404&quot;, wait a few minutes and try again.</p>
+</div>
+	</div>
+
+	
+	<div class="tab-pane " id="3_forms">
+	
+
+		<h2>Basic forms</h2>
+		
+<p>A basic html form looks like this:</p>
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;form&gt;</span>
+    <span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;text&quot;</span> <span class='na'>name=</span><span class='s'>&quot;name&quot;</span><span class='nt'>&gt;</span>
+    <span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;text&quot;</span> <span class='na'>name=</span><span class='s'>&quot;email&quot;</span><span class='nt'>&gt;</span>
+
+    <span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;submit&quot;</span><span class='nt'>&gt;</span>
+<span class='nt'>&lt;/form&gt;</span>
+</code></pre></div>
+<p>It has the following features:</p>
+
+<ul>
+<li>The whole form is contained with <code>&lt;form&gt;...&lt;/form&gt;</code> tags.</li>
+
+<li>It has two text fields, using <code>&lt;input&gt;</code> tags.</li>
+
+<li>The input tags are stand-alone tags: they have no closing <code>&lt;/input&gt;</code>.</li>
+
+<li>It has a submit button <code>&lt;input type=&#39;submit&#39;&gt;</code>.</li>
+</ul>
+
+<h3 id="forms_with_labels">Forms with labels</h3>
+
+<p>The above form contains only text boxes. A user visiting the form would have no idea what to put in each box. We can fix this with some simple labels:</p>
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;form&gt;</span>
+    <span class='nt'>&lt;label&gt;</span>Name<span class='nt'>&lt;/label&gt;</span>
+    <span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;text&quot;</span> <span class='na'>name=</span><span class='s'>&quot;name&quot;</span><span class='nt'>&gt;</span>
+
+    <span class='nt'>&lt;label&gt;</span>Email<span class='nt'>&lt;/label&gt;</span>
+    <span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;text&quot;</span> <span class='na'>name=</span><span class='s'>&quot;email&quot;</span><span class='nt'>&gt;</span>
+
+    <span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;submit&quot;</span><span class='nt'>&gt;</span>
+<span class='nt'>&lt;/form&gt;</span>
+</code></pre></div><div class='exercise alert alert-info'><strong>Task:</strong>
+<ol>
+<li>Clone the code for this session: <a href='https://github.com/rjpaskin/html_forms.git'>https://github.com/rjpaskin/html_forms.git</a></li>
+
+<li>Open <code>basic_form.html</code> in Sublime Text and Chrome.</li>
+</ol>
+</div>
+	</div>
+
+	
+	<div class="tab-pane " id="4_form_submissions">
+	
+
+		<h2>Form submissions</h2>
+		<div class='exercise alert alert-info'><strong>Task:</strong>
+<ol>
+<li>Open <code>basic_form.html</code> in Chrome.</li>
+
+<li>Fill in the name and email and click &#39;Submit&#39;.</li>
+
+<li>What, if anything, happens?</li>
+</ol>
+</div>
+<h3 id="the_name_property">The name property</h3>
+
+<p>When you clicked the submit button on the basic form, you probably noticed the URL change to something like:</p>
+
+<pre><code>file:///Users/tomclose/Documents/Coding/html_forms/basic_form.html?name=tom&amp;email=tom%40example.com</code></pre>
+
+<p>the values that you entered into the form now appear in the URL (the strange <code>%40</code> is code for the <code>@</code> character, which isn’t allowed to appear in URLs).</p>
+
+<p>The following things happened:</p>
+
+<ol>
+<li>The form packaged up the values you gave it. To do this it used the <code>name</code> property of each input tag.</li>
+
+<li>It submitted them to the <strong>same URL</strong> you were on.</li>
+
+<li>It did this by appending them to the URL as <em>query parameters</em>.</li>
+</ol>
+
+<p>The important thing in deciding how to package the values was the <code>name</code> property of the <code>&lt;input&gt;</code> tag. The tag</p>
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;input</span> <span class='na'>name=</span><span class='s'>&quot;email&quot;</span><span class='nt'>&gt;</span>
+</code></pre></div>
+<p>was converted to the name-value pair <code>email=tom%40example.com</code> in the URL.</p>
+
+<p>You can get a better idea of these stages by looking at the ‘Network’ tab on Chrome’s developer tools:</p>
+<div class='exercise alert alert-info'><strong>Task:</strong>
+<ol>
+<li>Open Chrome&#39;s developer tools and go to the &#39;Network&#39; tab.</li>
+
+<li>Put some new values into the form and press &#39;Submit&#39; again.</li>
+
+<li>Look at the information in the &#39;Network&#39; tab.</li>
+</ol>
+</div>
+<p>You should see something like the following: <img src="/assets/dev_tools_form_submit_get.png" alt="dev tools form submit get" /></p>
+
+<p>There are two <code>GET</code> requests. The first is to the same page, with the field names and their new values as query parameters. The second is to Bootstrap - when your browser reloads the page with the new query paramenters, it finds the <code>&lt;link rel=&#39;stylesheet&#39; http=&#39;bootstrap/css/bootsrap.css&#39; &gt;</code> in the <code>&lt;head&gt;</code> and so fetches that file too.</p>
+
+<p>You can find out more about the first <code>GET</code> request by clicking on the <code>headers</code> tab: <img src="/assets/dev_tools_form_submit.png" alt="dev tools form submit" /></p>
+
+<p>You should be able to see the names and their values from the input elements.</p>
+
+<h3 id="get_and_post">GET and POST</h3>
+
+<p>In the above example we saw that the browser made two <code>GET</code> requests. <code>GET</code> is the most common <em>HTTP verb</em>. It describes the normal way your browser asks for a webpage (and CSS files, js files, images etc.).</p>
+
+<p>The most important thing about <code>GET</code> requests is that they <strong>shouldn’t change any values on the server</strong>. For this reason they’re not usually used for form submissions, which are generally for providing new data to the server.</p>
+
+<p>We can change the form to submit using a <code>POST</code> request instead.</p>
+<div class='highlight'><pre><code class='html'>    <span class='nt'>&lt;form</span> <span class='na'>method=</span><span class='s'>&quot;post&quot;</span><span class='nt'>&gt;</span>
+</code></pre></div><div class='exercise alert alert-info'><strong>Task:</strong>
+<ol>
+<li>Change <code>basic_form.html</code> to submit via a POST request.</li>
+
+<li>Reload the page, fill in some new values and resubmit the form.</li>
+
+<li>What happens? Have a look in the &#39;Network&#39; section of developer tools.</li>
+</ol>
+</div>
+<p>You should notice that this time <strong>the URL doesn’t change</strong>. When a form is submitted with a <code>POST</code> method the parameters are packaged up and sent along in the <code>headers</code>, instead of being put in the url. You can check this out in Developer tools:</p>
+
+<p><img src="/assets/dev_tools_form_submit_post.png" alt="dev tools form submit post" /></p>
+
+<p>You can see the name and values have been packaged into a payload.</p>
+
+<p><img src="/assets/dev_tools_post_payload.png" alt="form submit payload" /></p>
+
+<p><strong>Warning:</strong> Just because POST parameters aren’t sent in the URL <strong>doesn’t</strong> mean they are private. Unless you are using HTTPS, anyone watching your traffic can read all the information you’re submitting.</p>
+
+<h3 id="submitting_to_a_different_url">Submitting to a different url</h3>
+
+<p>So far all our requests have been to the URL we were on. On the whole, this isn’t too useful. It’s easy to change though:</p>
+<div class='highlight'><pre><code class='html'>    <span class='nt'>&lt;form</span> <span class='na'>method=</span><span class='s'>&quot;post&quot;</span> <span class='na'>action=</span><span class='s'>&quot;thanks.html&quot;</span><span class='nt'>&gt;</span>
+</code></pre></div>
+<p>By setting the <code>action</code> attribute of the <code>form</code> tag we specify the URL to submit the form to.</p>
+<div class='exercise alert alert-info'><strong>Task:</strong>
+<ol>
+<li>Set the form in <code>basic_form.html</code> to submit to <code>thanks.html</code>.</li>
+
+<li>Refresh and resubmit the form.</li>
+
+<li>What happens? Where has your data gone?</li>
+</ol>
+</div>
+	</div>
+
+	
+	<div class="tab-pane " id="5_your_own_form">
+	
+
+		<h2>Creating your own form</h2>
+		
+<p>In order to have a working form on a website there needs to be somewhere for the information to go when the user clicks submit. So far we have only looked at <em>static</em> webpages: we have a dumb server that just hands out our hand-created HTML and CSS files. We have no way of accepting information from the user.</p>
+
+<p>Later in the course we will build <em>dynamic</em> sites, using Ruby on Rails. In a dynamic site the server builds the pages depending on information stored in a database and details provided by the user. When we have a dynamic site we will just submit the form information back to the server.</p>
+
+<h3 id="serving_pages_using_http">Serving pages using http://</h3>
+
+<p>We’re going to use <a href="http://forms.brace.io">a free service</a> from <a href="http://brace.io">Brace.io</a> to forward the contents of the form submission to your email address. However, for this to work properly, you’ll need to access the form page using <code>http://</code> (as opposed to <code>file://</code>). Fortunately Ruby has a little webserver we can use for this purpose.</p>
+<div class='exercise alert alert-info'><strong>Task:</strong>
+<ol>
+<li>
+<p>Copy and paste the following into <em>Terminal</em> or <em>Command Prompt with Ruby on Rails</em> (where <em>path/to/html_forms</em> is the location of the <code>html_forms</code> repo you cloned):</p>
+
+<pre><code>ruby -run -e http path/to/html_forms -p 5000</code></pre>
+</li>
+
+<li>
+<p>Open <a href='http://localhost:5000/basic_form.html'>http://localhost:5000/basic_form.html</a> - you should see the same page as before.</p>
+</li>
+</ol>
+</div>
+<h3 id="braceio">Brace.io</h3>
+
+<p>Brace allows us to design our own form HTML, with their server just handling the form submission - we just add our email address to the URL that the form submits to, and Brace does the rest. Since we’re <strong>sending</strong> data to the server, we need to use <code>POST</code>.</p>
+
+<p>Here’s an example:</p>
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;form</span> <span class='na'>method=</span><span class='s'>&quot;post&quot;</span> <span class='na'>action=</span><span class='s'>&quot;http://forms.brace.io/you@email.com&quot;</span><span class='nt'>&gt;</span>
+    <span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;text&quot;</span> <span class='na'>name=</span><span class='s'>&quot;name&quot;</span><span class='nt'>&gt;</span>
+    <span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;email&quot;</span> <span class='na'>name=</span><span class='s'>&quot;_replyto&quot;</span><span class='nt'>&gt;</span>
+    <span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;submit&quot;</span> <span class='na'>value=</span><span class='s'>&quot;Send&quot;</span><span class='nt'>&gt;</span>
+<span class='nt'>&lt;/form&gt;</span>
+</code></pre></div><div class='exercise alert alert-info'><strong>Task:</strong>
+<ol>
+<li>Set the <code>action</code> property of the <code>form</code> in <code>basic_form.html</code> to submit to Brace.io with your email address.</li>
+
+<li>Fill out and submit the form</li>
+
+<li>Check your inbox (of the email address you used) for a confirmation email - click on the link in the email to confirm that you own that address.</li>
+
+<li>Fill and submit the form again - you should now get an email containing the text you entered in the form!</li>
+</ol>
+</div>
+<h3 id="redirecting_the_submission">Redirecting the submission</h3>
+
+<p>It isn’t ideal that after the submission the user is sent to a Brace ‘form submitted’ page. Fortunately, it is possible to change this, using a special <code>_next</code> input:</p>
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;hidden&quot;</span> <span class='na'>name=</span><span class='s'>&quot;_next&quot;</span> <span class='na'>value=</span><span class='s'>&quot;http://localhost:5000/thanks.html&quot;</span><span class='nt'>&gt;</span>
+</code></pre></div>
+<p>By using <code>type=&quot;hidden&quot;</code>, we ensure that the input is not shown to the user, but is still included in the form submission.</p>
+<div class='exercise alert alert-info'><strong>Task:</strong>
+<ol>
+<li>Add an hidden input to the form in <code>basic_form.html</code> to redirect to <code>http://localhost:5000/thanks.html</code>.</li>
+
+<li>Test that the form redirects to this page by filling out the form again.</li>
+</ol>
+</div>
+	</div>
+
+	
+	<div class="tab-pane " id="6_other_elements">
+	
+
+		<h2>More form elements</h2>
+		<div class='exercise alert alert-info'><strong>Task:</strong>
+<ol>
+<li>Open <code>form_elements.html</code> in Sublime Text and in Chrome.</li>
+
+<li>Refer to both as you read through this page.</li>
+</ol>
+</div>
+<p>So far we have only looked at text field elements. As you’re probably aware from experience, there are many other options for html form fields. Here are some of the most common:</p>
+
+<h3 id="textarea">Textarea</h3>
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;textarea</span> <span class='na'>name=</span><span class='s'>&quot;feedback&quot;</span> <span class='na'>rows=</span><span class='s'>&quot;3&quot;</span><span class='nt'>&gt;&lt;/textarea&gt;</span>
+</code></pre></div>
+<p>A textarea is like a text field, except is is expandable.</p>
+
+<h3 id="password_field">Password field</h3>
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;password&quot;</span> <span class='na'>name=</span><span class='s'>&quot;user_password&quot;</span><span class='nt'>&gt;</span>
+</code></pre></div>
+<p>Password fields obscure your input as you type. They <strong>do not</strong> encrypt the value that was input - the password will be sent in plain text as a normal name-value pair in the payload. In particular, <strong>if you’re using HTTP, anyone snooping on the line can read your password</strong>. If you want to be secure you have to use HTTPS.</p>
+
+<h3 id="radio_buttons_and_checkboxes">Radio buttons and checkboxes</h3>
+<div class='highlight'><pre><code class='html'><span class='c'>&lt;!-- radio buttons --&gt;</span>
+<span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;radio&quot;</span> <span class='na'>name=</span><span class='s'>&quot;laptop-type&quot;</span> <span class='na'>value=</span><span class='s'>&quot;windows&quot;</span><span class='nt'>&gt;</span>
+<span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;radio&quot;</span> <span class='na'>name=</span><span class='s'>&quot;laptop-type&quot;</span> <span class='na'>value=</span><span class='s'>&quot;mac&quot;</span><span class='nt'>&gt;</span>
+<span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;radio&quot;</span> <span class='na'>name=</span><span class='s'>&quot;laptop-type&quot;</span> <span class='na'>value=</span><span class='s'>&quot;linux&quot;</span><span class='nt'>&gt;</span>
+
+<span class='c'>&lt;!-- checkboxes --&gt;</span>
+<span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;checkbox&quot;</span> <span class='na'>name=</span><span class='s'>&quot;languages-known&quot;</span> <span class='na'>value=</span><span class='s'>&quot;html&quot;</span><span class='nt'>&gt;</span>
+<span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;checkbox&quot;</span> <span class='na'>name=</span><span class='s'>&quot;languages-known&quot;</span> <span class='na'>value=</span><span class='s'>&quot;css&quot;</span><span class='nt'>&gt;</span>
+<span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;checkbox&quot;</span> <span class='na'>name=</span><span class='s'>&quot;languages-known&quot;</span> <span class='na'>value=</span><span class='s'>&quot;ruby&quot;</span><span class='nt'>&gt;</span>
+<span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;checkbox&quot;</span> <span class='na'>name=</span><span class='s'>&quot;languages-known&quot;</span> <span class='na'>value=</span><span class='s'>&quot;javascript&quot;</span><span class='nt'>&gt;</span>
+</code></pre></div>
+<p>Radio buttons and checkboxes are similar:</p>
+
+<ul>
+<li>You have multiple options linked by having the same name.</li>
+
+<li>Each option has a <code>value</code> which will be used in the name-value pair.</li>
+</ul>
+
+<p>They are different in that:</p>
+
+<ul>
+<li>In a group of radio buttons only one can be selected.</li>
+
+<li>In a group of checkboxes you can select zero, one or many.</li>
+
+<li>If you select multiple checkboxes a name-value pair will be created for each one.</li>
+</ul>
+
+<h3 id="select_boxes">Select boxes</h3>
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;select</span> <span class='na'>name=</span><span class='s'>&quot;fruits&quot;</span><span class='nt'>&gt;</span>
+    <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;banana&quot;</span><span class='nt'>&gt;</span>banana<span class='nt'>&lt;/option&gt;</span>
+    <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;apple&quot;</span><span class='nt'>&gt;</span>apple<span class='nt'>&lt;/option&gt;</span>
+    <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;pear&quot;</span><span class='nt'>&gt;</span>pear<span class='nt'>&lt;/option&gt;</span>
+    <span class='nt'>&lt;option</span> <span class='na'>value=</span><span class='s'>&quot;tomato&quot;</span><span class='nt'>&gt;</span>tomato<span class='nt'>&lt;/option&gt;</span>
+<span class='nt'>&lt;/select&gt;</span>
+</code></pre></div>
+<p>Select boxes provide a drop-down list of options. Note how the <code>&lt;select&gt;</code> contains the name and each <code>&lt;option&gt;</code> has a different <code>value</code>.</p>
+
+<h3 id="other_options">Other options</h3>
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;color&quot;</span><span class='nt'>&gt;</span>
+<span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;date&quot;</span><span class='nt'>&gt;</span>
+<span class='nt'>&lt;input</span> <span class='na'>type=</span><span class='s'>&quot;time&quot;</span><span class='nt'>&gt;</span>
+</code></pre></div>
+<p>There are several other options for HTML input types. For a complete list see <a href="http://www.w3schools.com/tags/tag_input.asp">here</a>. Many of these input types are new in <a href="http://www.html5rocks.com/en/">HTML5</a>, and so won’t work in older browsers.</p>
+
+<p>For more information about styling forms have a look at the <a href="http://getbootstrap.com/css/#forms">Twitter Bootstrap forms section</a>.</p>
 
 	</div>
 
 	
-	<div class="tab-pane " id="6_homework">
+	<div class="tab-pane " id="7_homework">
 	
 
 		<h2>Homework</h2>
-		<div class='exercise alert alert-info'><strong>Task:</strong> 
+		<div class='exercise alert alert-info'><strong>Task:</strong>
+<ol>
+<li>Finish off the exercises.</li>
 
-<p>Continue to work on your <code>first_site</code> until it&#39;s something you can be proud of!</p>
-
+<li>Continue to work on your <code>first_site</code> until it&#39;s something you can be proud of! You may want to add a contact form using <a href='http://forms.brace.io'>Brace Forms</a>.</li>
+</ol>
 </div>
 	</div>
 
