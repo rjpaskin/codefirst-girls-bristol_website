@@ -93,7 +93,7 @@
 
 <h3 id="pointing_your_domain_name_towards_github">Pointing your domain name towards GitHub</h3>
 
-<p>For the first bit you need to log in to your domain registrar and change the DNS settings. You want an <em>A-record</em> pointing to <code>204.232.175.78</code> (which is github.com). Note that it can take up to a couple of days for DNS changes to propagate.</p>
+<p>For the first bit you need to log in to your domain registrar and change the DNS settings. You want <em>A-records</em> pointing to <code>192.30.252.153</code> and <code>192.30.252.154</code> (which are github.com). Note that it can take up to a couple of days for DNS changes to propagate.</p>
 
 <p>If you’re using 123-reg, your should log in, select your domain from the list, and click “Manage”. You should then go to “Manage DNS”.</p>
 
@@ -412,7 +412,7 @@ Commands:
 <li>
 <p>Copy and paste the following into <em>Terminal</em> or <em>Command Prompt with Ruby on Rails</em> (where <em>path/to/html_forms</em> is the location of the <code>html_forms</code> repo you cloned):</p>
 
-<pre><code>ruby -run -e http path/to/html_forms -p 5000</code></pre>
+<pre><code>ruby -run -e httpd path/to/html_forms -p 5000</code></pre>
 </li>
 
 <li>
