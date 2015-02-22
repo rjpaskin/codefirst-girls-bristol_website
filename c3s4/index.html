@@ -415,15 +415,14 @@
 <p>The important bit is <code>erb(:email, :layout =&gt; false)</code>, which tells sinatra to find <code>views/email.erb</code> and run it through erb (to replace any <code>&lt;%= %&gt;</code> tags). The <code>:layout =&gt; false</code> tells sintra to skip the normal layout file: we want to send the user the raw text, not an html page! The result is then used as the email’s body.</p>
 
 <p>The template will look something like this:</p>
+<div class='highlight'><pre><code class='rhtml'>Hello there!
 
-<pre><code>Hello there!
-
-&lt;%= @name %&gt; is a great fruit!
+<span class='cp'>&lt;%=</span> <span class='vi'>@name</span> <span class='cp'>%&gt;</span> is a great fruit!
 
 Best,
 
-The FruitApp team</code></pre>
-<div class='exercise alert alert-info'><strong>Task:</strong>
+The FruitApp team
+</code></pre></div><div class='exercise alert alert-info'><strong>Task:</strong>
 <ol>
 <li>Add the required line of code in the <code>post &amp;#39;/&amp;#39;</code> block, to send a welcome email to the new user.</li>
 

@@ -88,16 +88,16 @@
 <h2 id="interactive_ruby_irb">Interactive ruby: irb</h2>
 
 <p>Ruby is an <em>interpreted language</em>. One of the great things about an interpreted language is that it’s often possible to interact with the interpreter in real time. When you installed ruby, you also got a program called <code>irb</code> (interactive ruby), which allows you to interpret ruby on the command line. To start it you just type <code>irb</code> on the command line.</p>
-<div class='highlight'><pre><code class='irb'><span class='go'>001: &gt; 2 + 2</span>
-<span class='go'> =&gt; 4 </span>
-<span class='go'>002: &gt; </span>
+<div class='highlight'><pre><code class='irb'><span class='gp'>&gt;&gt; </span><span class='mi'>2</span> <span class='o'>+</span> <span class='mi'>2</span>
+<span class='go'>=&gt; 4</span>
+<span class='go'>&gt;&gt;</span>
 </code></pre></div>
 <p><code>2 + 2</code> is a ruby <em>expression</em>. The <code>=&gt;</code> symbol tells you what <em>value</em> this expression evaluates to. The interpreter has converts expressions to values.</p>
 
 <p>If you just type the value <code>4</code> into irb, you will see that it will return <code>4</code> to you.</p>
-<div class='highlight'><pre><code class='irb'><span class='go'>001: &gt; 4</span>
-<span class='go'> =&gt; 4 </span>
-<span class='go'>002: &gt; </span>
+<div class='highlight'><pre><code class='irb'><span class='gp'>&gt;&gt; </span><span class='mi'>4</span>
+<span class='go'>=&gt; 4</span>
+<span class='go'>&gt;&gt;</span>
 </code></pre></div>
 <p>Like all values in ruby, <code>4</code> is also an expression - it just evaluates to itself.</p>
 
@@ -106,12 +106,12 @@
 <h2 id="comments">Comments</h2>
 
 <p>In ruby, any part of a line that comes after a <code>#</code> is ignored. This is useful when you’re writing complicated programs, as it allows you to write human-readable comments to document your code.</p>
-<div class='highlight'><pre><code class='irb'><span class='go'>001: &gt; 2 + 2  # add together 2 and 2</span>
-<span class='go'> =&gt; 4 </span>
-<span class='go'>002: &gt; # this does nothing</span>
-<span class='go'>003: &gt; </span>
+<div class='highlight'><pre><code class='irb'><span class='gp'>&gt;&gt; </span><span class='mi'>2</span> <span class='o'>+</span> <span class='mi'>2</span>  <span class='c1'># add together 2 and 2</span>
+<span class='go'>=&gt; 4</span>
+<span class='gp'>&gt;&gt; </span><span class='c1'># this does nothing</span>
+<span class='go'>&gt;&gt;</span>
 </code></pre></div>
-<p>Notice how in line <code>002</code> above there is no <code>=&gt;</code> and no return value; comments don’t evaluate to anything - they’re completely ignored.</p>
+<p>Notice how in the line <code># this does nothing</code> above there is no <code>=&gt;</code> and no return value; comments don’t evaluate to anything - they’re completely ignored.</p>
 <div class='exercise alert alert-info'><strong>Task:</strong>
 <ol>
 <li>Pick a partner.</li>
@@ -171,29 +171,29 @@
 		<h2>Exercise summary</h2>
 		
 <p>Before we will move on to variables, we’ll quickly look at a few of the things that you found out in the previous exercise:</p>
-<div class='highlight'><pre><code class='ruby'><span class='o'>&gt;</span> <span class='mi'>6</span> <span class='o'>/</span> <span class='mi'>2</span>
-<span class='o'>=&gt;</span> <span class='mi'>3</span>
-<span class='o'>&gt;</span> <span class='mi'>5</span> <span class='o'>/</span> <span class='mi'>2</span>
-<span class='o'>=&gt;</span> <span class='mi'>2</span>
-<span class='o'>&gt;</span> <span class='mi'>5</span><span class='o'>.</span><span class='mi'>0</span> <span class='o'>/</span> <span class='mi'>2</span>
-<span class='o'>=&gt;</span> <span class='mi'>2</span><span class='o'>.</span><span class='mi'>5</span>
-<span class='o'>&gt;</span> <span class='mi'>5</span> <span class='o'>%</span> <span class='mi'>2</span>
-<span class='o'>=&gt;</span> <span class='mi'>1</span>
+<div class='highlight'><pre><code class='irb'><span class='gp'>&gt;&gt; </span><span class='mi'>6</span> <span class='o'>/</span> <span class='mi'>2</span>
+<span class='go'>=&gt; 3</span>
+<span class='gp'>&gt;&gt; </span><span class='mi'>5</span> <span class='o'>/</span> <span class='mi'>2</span>
+<span class='go'>=&gt; 2</span>
+<span class='gp'>&gt;&gt; </span><span class='mi'>5</span><span class='o'>.</span><span class='mi'>0</span> <span class='o'>/</span> <span class='mi'>2</span>
+<span class='go'>=&gt; 2.5</span>
+<span class='gp'>&gt;&gt; </span><span class='mi'>5</span> <span class='o'>%</span> <span class='mi'>2</span>
+<span class='go'>=&gt; 1</span>
 </code></pre></div>
 <p>If you give ruby integers (whole numbers), it will do <em>integer division</em>. For example, <code>5 / 2</code> gives <code>2</code> as it is the largest whole number of times you can remove <code>2</code> from <code>5</code>. The partner to integer division is the remainder <code>5 % 2</code>, giving <code>1</code>. Together these two operations tell you that <code>2</code> goes twice into <code>5</code> with remainder <code>1</code>. If you give ruby decimals it will do normal division. <strong>Everyone gets caught out by this at some point. You have been warned!</strong></p>
-<div class='highlight'><pre><code class='ruby'><span class='o'>&gt;</span> <span class='mi'>2</span><span class='o'>.</span><span class='n'>even?</span>
-<span class='o'>=&gt;</span> <span class='kp'>true</span>
+<div class='highlight'><pre><code class='irb'><span class='gp'>&gt;&gt; </span><span class='mi'>2</span><span class='o'>.</span><span class='n'>even?</span>
+<span class='go'>=&gt; true</span>
 </code></pre></div>
 <p>The line above is actually pretty special. We’ve just asked the value <code>2</code> a question and it’s responded. In programming terms, this works because <code>2</code> is an <em>object</em> - something that contains both data and <em>methods</em> that can query/manipulate the data. In this case, <code>even?</code> is the method that we called. In ruby <strong>all values are objects</strong>. This is unusual and isn’t true in many other programming languages. We’ll leave it at that for the time being, but you’ll learn more about this later.</p>
-<div class='highlight'><pre><code class='ruby'><span class='o'>&gt;</span> <span class='s2'>&quot;hello &quot;</span> <span class='o'>+</span> <span class='s2'>&quot;world&quot;</span>
-<span class='o'>=&gt;</span> <span class='s2'>&quot;hello world&quot;</span>
-<span class='o'>&gt;</span> <span class='s2'>&quot;don&#39;t shout&quot;</span><span class='o'>.</span><span class='n'>upcase</span>
-<span class='o'>=&gt;</span> <span class='s2'>&quot;DON&#39;T SHOUT&quot;</span>
+<div class='highlight'><pre><code class='irb'><span class='gp'>&gt;&gt; </span><span class='s2'>&quot;hello &quot;</span> <span class='o'>+</span> <span class='s2'>&quot;world&quot;</span>
+<span class='go'>=&gt; &quot;hello world&quot;</span>
+<span class='gp'>&gt;&gt; </span><span class='s2'>&quot;don&#39;t shout&quot;</span><span class='o'>.</span><span class='n'>upcase</span>
+<span class='go'>=&gt; &quot;DON&#39;T SHOUT&quot;</span>
 </code></pre></div>
 <p>Here you met another third type of value: <code>&quot;hello&quot;</code> is a string. As you see here, you can add strings together. Like all ruby values, strings are also objects and therefore have methods. Here we used the <code>upcase</code> method, to change the string into uppercase. You can find out more about the methods that strings have in the <a href="http://ruby-doc.org/core-2.1.0/String.html">ruby docs</a>.</p>
-<div class='highlight'><pre><code class='ruby'><span class='o'>&gt;</span> <span class='s2'>&quot;Bob&quot;</span> <span class='o'>+</span> <span class='mi'>3</span>
-<span class='ss'>TypeError</span><span class='p'>:</span> <span class='n'>can</span><span class='s1'>&#39;t convert Fixnum into String</span>
-<span class='s1'>from (irb):1:in `+&#39;</span>
+<div class='highlight'><pre><code class='irb'><span class='gp'>&gt;&gt; </span><span class='s2'>&quot;Bob&quot;</span> <span class='o'>+</span> <span class='mi'>3</span>
+<span class='go'>TypeError: can&#39;t convert Fixnum into String</span>
+<span class='go'>from (irb):1:in `+&#39;</span>
 </code></pre></div>
 <p>Oh dear! Turns out that you can’t add a string to an integer. Have another read of the message that irb gave you. Can you figure out what it is saying? When something goes wrong, ruby tries to be as helpful as it can. Learning to interpret the errors that ruby gives is an important part of learning to become a programmer.</p>
 
@@ -270,8 +270,7 @@
 </code></pre></div>
 <p>In the code above, string1 and string2 are exactly the same. The difference between <code>&#39;</code> and <code>&quot;</code> is that <code>&quot;</code> allows you to do <strong>string interpolation</strong>:</p>
 <div class='highlight'><pre><code class='ruby'><span class='n'>age</span> <span class='o'>=</span> <span class='mi'>5</span>
-<span class='n'>age_description</span> <span class='o'>=</span> <span class='s2'>&quot;My age is </span><span class='si'>#{</span><span class='n'>age</span><span class='si'>}</span><span class='s2'>.&quot;</span>
-<span class='o'>=&gt;</span> <span class='s2'>&quot;My age is 5.&quot;</span>
+<span class='n'>age_description</span> <span class='o'>=</span> <span class='s2'>&quot;My age is </span><span class='si'>#{</span><span class='n'>age</span><span class='si'>}</span><span class='s2'>.&quot;</span> <span class='c1'>#=&gt; &quot;My age is 5.&quot;</span>
 </code></pre></div>
 <p>Any ruby expression inside the <code>#{ }</code> will be evaluated and inserted into the string. Here we gave it the variable <code>age</code>, which points to the value <code>5</code>. As <code>5</code> is a value it evaluates to itself, so 5 is inserted into the string.</p>
 <div class='exercise alert alert-info'><strong>Task:</strong> 
@@ -352,10 +351,10 @@
 	
 
 		<h2>Exercise summary</h2>
-		<div class='highlight'><pre><code class='ruby'><span class='o'>&gt;</span> <span class='n'>x</span> <span class='o'>=</span> <span class='mi'>1</span>
-<span class='o'>=&gt;</span> <span class='mi'>1</span>
-<span class='o'>&gt;</span> <span class='n'>x</span> <span class='o'>=</span> <span class='n'>x</span> <span class='o'>+</span> <span class='mi'>1</span>
-<span class='o'>=&gt;</span> <span class='mi'>2</span>
+		<div class='highlight'><pre><code class='irb'><span class='gp'>&gt;&gt; </span><span class='n'>x</span> <span class='o'>=</span> <span class='mi'>1</span>
+<span class='go'>=&gt; 1</span>
+<span class='gp'>&gt;&gt; </span><span class='n'>x</span> <span class='o'>=</span> <span class='n'>x</span> <span class='o'>+</span> <span class='mi'>1</span>
+<span class='go'>=&gt; 2</span>
 </code></pre></div>
 <p>This might seem really obvious, but it’s worth pointing out: <code>=</code> is an assignment operator; it means ‘set name on the left equal to the value on the right’. It isn’t the same equals as you see in maths! In maths <code>x = x + 1</code> doesn’t really make sense -it’s an equation with no (finite) solutions. In ruby <code>x = x + 1</code> makes perfect sense - just set <code>x</code> to be one more than it was before.</p>
 <div class='highlight'><pre><code class='ruby'><span class='n'>b</span> <span class='o'>=</span> <span class='s2'>&quot;hello&quot;</span>
@@ -424,16 +423,16 @@
 <text font-family='&apos;MyriadPro-Regular&apos;' font-size='12' transform='matrix(1 0 0 1 91.7783 26.8066)'>“Hello”</text>
 <path d='M144.556,24c0,6.627-5.373,12-12,12h-39
   c-6.627,0-12-5.373-12-12v-3c0-6.627,5.373-12,12-12h39c6.627,0,12,5.373,12,12V24z' fill='none' stroke='#F7941E' stroke-miterlimit='10' stroke-width='3' />
-</svg><div class='highlight'><pre><code class='ruby'><span class='o'>&gt;</span> <span class='nb'>name</span> <span class='o'>=</span> <span class='s2'>&quot;Dave&quot;</span>
-<span class='o'>=&gt;</span> <span class='s2'>&quot;Dave&quot;</span>
-<span class='o'>&gt;</span> <span class='n'>f</span> <span class='o'>=</span> <span class='s2'>&quot;Hello </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>! &quot;</span>
-<span class='o'>=&gt;</span> <span class='s2'>&quot;Hello Dave! &quot;</span>
-<span class='o'>&gt;</span> <span class='n'>f</span>
-<span class='o'>=&gt;</span> <span class='s2'>&quot;Hello Dave! &quot;</span>
-<span class='o'>&gt;</span> <span class='nb'>name</span> <span class='o'>=</span> <span class='s2'>&quot;Sarah&quot;</span>
-<span class='o'>=&gt;</span> <span class='s2'>&quot;Sarah&quot;</span>
-<span class='o'>&gt;</span> <span class='n'>f</span>
-<span class='o'>=&gt;</span> <span class='s2'>&quot;Hello Dave! &quot;</span>
+</svg><div class='highlight'><pre><code class='irb'><span class='gp'>&gt;&gt; </span><span class='nb'>name</span> <span class='o'>=</span> <span class='s2'>&quot;Dave&quot;</span>
+<span class='go'>=&gt; &quot;Dave&quot;</span>
+<span class='gp'>&gt;&gt; </span><span class='n'>f</span> <span class='o'>=</span> <span class='s2'>&quot;Hello </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>! &quot;</span>
+<span class='go'>=&gt; &quot;Hello Dave! &quot;</span>
+<span class='gp'>&gt;&gt; </span><span class='n'>f</span>
+<span class='go'>=&gt; &quot;Hello Dave! &quot;</span>
+<span class='gp'>&gt;&gt; </span><span class='nb'>name</span> <span class='o'>=</span> <span class='s2'>&quot;Sarah&quot;</span>
+<span class='go'>=&gt; &quot;Sarah&quot;</span>
+<span class='gp'>&gt;&gt; </span><span class='n'>f</span>
+<span class='go'>=&gt; &quot;Hello Dave! &quot;</span>
 </code></pre></div>
 <p>The above shows that <em>string interpolation happens when you write it down</em>. When you first write <code>f = &quot;Hello #{name}! &quot;</code> ruby immediately looks up <code>name</code> and bakes it straight into the string. Setting <code>name</code> to something differeny later on, won’t change this.</p>
 
